@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import bankLogo from "./assets/images/dinerobank.png";
+import SearchBar from "./components/SearchBar/SearchBar";
+import User from "./components/User/User.jsx";
 
-function App() {
+export default function App() {
+  const bankEmployee = {
+    name: "Yael",
+    email: "spongecola@gmail.com",
+    balance: 10000,
+  };
+
+  const address = {
+    houseNo: 74,
+    street: "Manila Street",
+    country: "Philippines"
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello World</h1>
+      <img src={bankLogo} alt="logo"></img>
+      <SearchBar></SearchBar>
+      <User employee={bankEmployee} address={address}></User>
     </div>
   );
 }
-
-export default App;

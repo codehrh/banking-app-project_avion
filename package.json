@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fontsource/comfortaa": "^5.0.20",
+    "@fontsource/exo-2": "^5.0.18",
+    "@fontsource/kalnia-glaze": "^5.0.1",
+    "@fontsource/lexend": "^5.0.20",
+    "@fontsource/m-plus-rounded-1c": "^5.0.13",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",

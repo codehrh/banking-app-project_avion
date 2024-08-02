@@ -1,6 +1,7 @@
 import "./User.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPencil } from "@fortawesome/free-solid-svg-icons";
+import '@fontsource/exo-2';
 
 function User(params) {
     const { name, email, balance } = params.employee;

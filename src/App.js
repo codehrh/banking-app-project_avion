@@ -2,6 +2,7 @@ import './App.css';
 import bankLogo from "./assets/images/dinerobank.png";
 import SearchBar from "./components/SearchBar/SearchBar";
 import User from "./components/User/User.jsx";
+import Logo from "./components/Logo/Logo.jsx";
 
 export default function App() {
   const bankEmployee = {
@@ -18,6 +19,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <Logo></Logo>
       <h1>Hello World</h1>
       <img src={bankLogo} alt="logo"></img>
       <SearchBar></SearchBar>

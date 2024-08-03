@@ -3,6 +3,7 @@ import bankLogo from "./assets/images/dinerobank.png";
 import SearchBar from "./components/SearchBar/SearchBar";
 import User from "./components/User/User.jsx";
 import Logo from "./components/Logo/Logo.jsx";
+import bankUsers from "./assets/data/bankUsers.json";
 
 export default function App() {
   const bankEmployee = {
@@ -24,6 +25,13 @@ export default function App() {
       <img src={bankLogo} alt="logo"></img>
       <SearchBar></SearchBar>
       <User employee={bankEmployee} address={address}></User>
+      {bankUsers.map((bankUsers)=> {
+        return (
+          <div key={bankUsers.id}>
+            {bankUsers.name} {bankUsers.balance}
+            </div>
+        );
+      })}
     </div>
   );
 }

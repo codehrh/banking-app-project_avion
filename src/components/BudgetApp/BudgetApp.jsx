@@ -8,9 +8,9 @@ export default function BudgetApp () {
             </div>
             <div classname="recentTransactions">
                 <ul className="transactionList">
-                    <li>transaction 3</li>
-                    <li>transaction 2</li>
-                    <li>transaction 1</li>
+                    <li className="transactionItem">transaction 3</li>
+                    <li className="transactionItem">transaction 2</li>
+                    <li className="transactionItem">transaction 1</li>
                 </ul>
             </div>
         </div>

@@ -8,4 +8,4 @@ export default function Logo() {
             <h1>Dinero <span><img src={bankLogo} alt="logo"></img></span> Bank</h1>
         </div>
     )
-}
+}   

@@ -1,5 +1,41 @@
+body {
+  background-color: #000814;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+* {
+  color: azure;
+}
+
+.nav {
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vmin 2vmin;
+}
+
+.mainContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.leftContainer {
+  width: 20%;
+  height: 100%;
+}
+
+.rightContainer {
+  width: 80%;
+  height: 80vh;
+}
+
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .App-logo {
@@ -32,6 +68,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

@@ -21,21 +21,39 @@ export default function App() {
   }
 
   return (
-    <div className="App">
-      <Logo></Logo>
-      <h1>Hello World</h1>
-      <img src={bankLogo} alt="logo"></img>
-      <SearchBar></SearchBar>
-      <Menu></Menu>
-      <BudgetApp></BudgetApp>
-      <User employee={bankEmployee} address={address}></User>
-      {bankUsers.map((bankUsers)=> {
-        return (
-          <div key={bankUsers.id}>
-            {bankUsers.name} {bankUsers.balance}
-            </div>
-        );
-      })}
-    </div>
+    <body>
+      <div className="App">
+        <div className="nav">
+          <div className="leftnav">
+            <Logo></Logo>
+          </div>
+          <div className="rightnav">
+            <SearchBar></SearchBar>
+          </div>
+        </div>
+
+        <div className="mainContainer">
+          <div className="leftContainer">
+            <Menu></Menu>
+          </div>
+          <div className="rightContainer">
+            <BudgetApp></BudgetApp>
+          </div>
+
+          {/* <User employee={bankEmployee} address={address}></User>
+          {bankUsers.map((bankUsers) => {
+            return (
+              <div key={bankUsers.id}>
+                {bankUsers.name} {bankUsers.balance}
+              </div>
+            );
+          })} */}
+
+        </div>
+
+
+      </div>
+    </body>
+
   );
 }

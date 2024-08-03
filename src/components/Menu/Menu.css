@@ -1,0 +1,31 @@
+
+
+.Menu {
+    position: fixed;
+    top: 25vh;
+    left: 0;
+    width: 200px;
+    max-width: 90vw;
+    max-height: 50vh;
+    min-height: 250px;
+    /* z-index: 100;*/
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: rgb(0, 53, 102);
+}
+
+.menuList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: bold;
+    color: white;
+}
+
+.listItem {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}

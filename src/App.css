@@ -1,7 +1,6 @@
 body {
   background-color: #000814;
   box-sizing: border-box;
-  height: 100vh;
 }
 
 * {
@@ -14,13 +13,14 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1vmin 2vmin;
+  padding: 1vmin 2.5vmin;
 }
 
 .mainContainer {
-  width: 100%;
+  width: 96%;
   display: flex;
   flex-direction: row;
+  margin-right: 4vmin;
 }
 
 .leftContainer {
@@ -31,11 +31,14 @@ body {
 .rightContainer {
   width: 80%;
   height: 80vh;
+  margin-left: 2vmin;
+
+
 }
 
 .App {
   text-align: center;
-  height: 100%;
+  width: 100%;
 }
 
 .App-logo {
@@ -49,7 +52,7 @@ body {
   }
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -58,7 +61,7 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;

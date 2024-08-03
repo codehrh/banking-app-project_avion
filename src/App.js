@@ -48,10 +48,7 @@ export default function App() {
               </div>
             );
           })} */}
-
         </div>
-
-
       </div>
     </body>
 

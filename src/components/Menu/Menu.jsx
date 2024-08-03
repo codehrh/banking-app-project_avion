@@ -1,4 +1,5 @@
 import "./Menu.css";
+import '@fontsource/exo-2';
 
 export default function Menu () {
     return (

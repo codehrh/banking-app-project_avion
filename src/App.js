@@ -113,6 +113,10 @@ export default function App() {
         <button onClick={handleDivision}>Divide</button>
         <h1>Result: {result}</h1>
       </div>
+
+      <div className="budgetTransactor">
+        
+      </div>
     </body>
 
   );

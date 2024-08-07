@@ -1,0 +1,14 @@
+[
+    {
+        "tast_name": "Cook Water",
+        "id": 0
+    },
+    {
+        "tast_name": "Drink Beef",
+        "id": 1
+    },
+    {
+        "tast_name": "Sip Sewage",
+        "id": 2
+    }
+]

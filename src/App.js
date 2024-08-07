@@ -7,6 +7,8 @@ import bankUsers from "./assets/data/bankUsers.json";
 import Menu from "./components/Menu/Menu.jsx";
 import BudgetApp from "./components/BudgetApp/BudgetApp.jsx";
 import { useState } from 'react';
+import task from "./assets/task-list.json";
+import AddTask from "./components/AddTask.jsx";
 
 export default function App() {
   const bankEmployee = {
@@ -69,6 +71,14 @@ export default function App() {
     setResult(divide);
   }
 
+  const[datas, setDatas] = useState(task)
+  // datas.push(newData)
+  const handleDatas = (newData) => {
+    // [...prevData] - creates a new array that contains the prev data and newly created task and gives back to data state
+    //spread operator
+    setDatas((prevData) => [...prevData, newData]);
+  };
+
 
   return (
     <body>
@@ -113,11 +123,12 @@ export default function App() {
         <button onClick={handleDivision}>Divide</button>
         <h1>Result: {result}</h1>
       </div>
-
-      <div className="budgetTransactor">
-        
+      <div className="dataList">
+        {datas.map((x) => {
+          return <div key={x.id}>{x.task_name}</div>;
+        })}
       </div>
+      <AddTask handleAddDatas={handleDatas} newId={datas.length}></AddTask>
     </body>
-
   );
 }

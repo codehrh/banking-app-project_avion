@@ -80,3 +80,7 @@ body {
 .calculator input, button{
   color: black;
 }
+
+.dataList input, button{
+  color: black;
+}

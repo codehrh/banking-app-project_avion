@@ -1,5 +1,8 @@
+import MainContainer from "../components/MainContainer/MainContainer";
 export default function Home() {
-    return(
-        <div className="Home"><h1>Home</h1></div>
+    return (
+        <div className="Home">
+            <MainContainer></MainContainer>
+        </div>
     )
 }

@@ -11,12 +11,15 @@ import task from "./assets/task-list.json";
 import AddTask from "./components/AddTask.jsx";
 
 //Routing lesson
+import Login from "./pages/Login.jsx";
 import About from "./pages/About.jsx";
 import Home from "./pages/Home.jsx";
 import Transactions from './pages/Transactions.jsx';
 import NotFound from './pages/NotFound.jsx';
 import RootLayout from './layouts/RootLayout.jsx';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+
+
 
 export default function App() {
   const bankEmployee = {
@@ -79,7 +82,7 @@ export default function App() {
     setResult(divide);
   }
 
-  const[datas, setDatas] = useState(task)
+  const [datas, setDatas] = useState(task)
   // datas.push(newData)
   const handleDatas = (newData) => {
     // [...prevData] - creates a new array that contains the prev data and newly created task and gives back to data state
@@ -91,66 +94,24 @@ export default function App() {
   return (
     <body>
       <div className="App">
-        <div className="nav">
-          <div className="leftnav">
-            <Logo></Logo>
-          </div>
-          <div className="rightnav">
-            <SearchBar></SearchBar>
-          </div>
-        </div>
+        <BrowserRouter>
+          <Routes>
+            {/* Default route pointing to Login */}
+            <Route path="/" element={<Navigate to="/login" />} />
 
-        <div className="mainContainer">
-          <div className="leftContainer">
-            <Menu></Menu>
-          </div>
-          <div className="rightContainer">
-            <BudgetApp></BudgetApp>
-          </div>
+            {/* Login page */}
+            <Route path="/login" element={<Login />} />
 
-          {/* <User employee={bankEmployee} address={address}></User>
-          {bankUsers.map((bankUsers) => {
-            return (
-              <div key={bankUsers.id}>
-                {bankUsers.name} {bankUsers.balance}
-              </div>
-            );
-          })} */}
-        </div>
+            {/* Other routes under RootLayout */}
+            {/* <Route path="/" element={<RootLayout />}>
+            <Route path="home" element={<Home />} />
+            <Route path="transactions" element={<Transactions />} />
+            <Route path="about" element={<About />} />
+            <Route path="*" element={<NotFound />} />
+          </Route> */}
+          </Routes>
+        </BrowserRouter>
       </div>
-      <div className="calculator">
-        <h1>Simple Calculator</h1>
-        <label>Num 1:</label>
-        <input type="number" onChange={handleNum1Change}></input>
-        <label>Num 2:</label>
-        <input type="number" onChange={handleNum2Change}></input>
-        <br />
-        <button onClick={handleAddition}>Add</button>
-        <button onClick={handleSubtraction}>Subtract</button>
-        <button onClick={handleMultiplication}>Multiply</button>
-        <button onClick={handleDivision}>Divide</button>
-        <h1>Result: {result}</h1>
-      </div>
-      <div className="dataList">
-        {datas.map((x) => {
-          return <div key={x.id}>{x.task_name}</div>;
-        })}
-      </div>
-      <AddTask handleAddDatas={handleDatas} newId={datas.length}></AddTask>
-
-      <BrowserRouter>
-        <Routes>
-          <Route pathj="/" element={<RootLayout></RootLayout>}>
-            <Route index element={<Home></Home>}></Route>
-            <Route
-              path="transactions"
-              element={<Transactions></Transactions>}
-            ></Route>
-            <Route path="about" element={<About></About>}></Route>
-            <Route path="*" element={<NotFound></NotFound>}></Route>
-          </Route>
-        </Routes>
-      </BrowserRouter>
     </body>
   );
 }

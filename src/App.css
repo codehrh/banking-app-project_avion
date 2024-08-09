@@ -28,6 +28,16 @@ body {
   height: 100%;
 }
 
+.leftContainer div {
+  justify-content: center;
+  align-items: center;
+}
+
+.leftContainer a {
+  text-decoration: none;
+}
+
+
 .rightContainer {
   width: 80%;
   height: 80vh;
@@ -77,10 +87,16 @@ body {
   }
 }
 
-.calculator input, button{
+.calculator input,
+button {
   color: black;
 }
 
-.dataList input, button{
+.dataList input,
+button {
+  color: black;
+}
+
+.login input {
   color: black;
 }
